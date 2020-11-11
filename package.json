@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --verbose",
-    "tickle-me": "node index.js"
+    "tickle-me": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Ian Del Duca",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "jest": "^26.6.1",
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }

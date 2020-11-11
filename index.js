@@ -1,5 +1,8 @@
-const { App } = require("./src/App/App.js");
+const express = require("express");
+const PORT = 3000;
 
-const instance = new App();
+const app = express();
 
-instance.run();
+app.get("/estimates", (req, res) => res.send("/estimates"));
+
+app.listen(PORT, () => console.log(`PG APP IS RUNNING ON PORT ${PORT}`));
