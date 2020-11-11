@@ -1,8 +1,12 @@
 const express = require("express");
 const PORT = 3000;
+const { getEstimates } = require("./src/api/getEstimates");
 
 const app = express();
 
-app.get("/estimates", (req, res) => res.send("/estimates"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/estimates", getEstimates);
 
 app.listen(PORT, () => console.log(`PG APP IS RUNNING ON PORT ${PORT}`));
